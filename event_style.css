@@ -1,0 +1,116 @@
+/* Global Reset: Removing default margin, padding, and setting box-sizing to border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling: Setting font and background for the entire page */
+body {
+    height: 100%; /* Full height for html and body */
+    font-family: Arial, sans-serif; /* Default font for the page */
+    color: #fff; /* Default text color */
+    background-color: #000; /* Background color */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section: Styling the header area */
+header {
+    background-color: #000; /* Header background color */
+    color: #00f; /* Header text color */
+    padding: 20px 0; /* Top and bottom padding */
+    text-align: center; /* Center aligning text */
+    border-bottom: 2px solid #00f; /* Blue border at the bottom */
+}
+
+/* Header Title Styling */
+header h1 {
+    font-size: 2.5em; /* Font size for the main title */
+}
+
+/* Header Subtitle Styling */
+header p {
+    font-size: 1.2em; /* Font size for the subtitle/description */
+}
+
+/* Main Content Area: Padding for main content */
+main {
+    padding: 20px; /* Padding around the main content */
+    flex-grow: 1; /* Make the main content area expand to fill space */
+}
+
+/* Section Containers: Shared styling for event info, schedule, and registration */
+.event-info, .schedule, .registration {
+    background-color: #111; /* Background color for sections */
+    margin-bottom: 20px; /* Bottom margin to create space between sections */
+    padding: 20px; /* Padding inside each section */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+/* Section Headings: Styling for the headings within sections */
+.event-info h2, .schedule h2 {
+    color: #00f; /* Heading text color */
+    border-bottom: 2px solid #00f; /* Blue underline for headings */
+    padding-bottom: 10px; /* Padding at the bottom of headings */
+}
+
+.registration h2 {
+    color: #00f; /* Heading text color */
+    border-bottom: 2px solid #00f; /* Blue underline for headings */
+    padding-bottom: 10px; /* Padding at the bottom of headings */
+    display: flex;
+}
+
+/* List Styling: Removing default list styling */
+ul {
+    list-style-type: none; /* Removing bullet points from lists */
+}
+
+/* List Items: Adding spacing between list items */
+ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Form Label: Ensuring labels are displayed as block-level elements */
+form label {
+    display: block; /* Display label as block */
+    margin-top: 10px; /* Top margin to space out from previous elements */
+}
+
+/* Form Input: Styling input fields */
+form input {
+    width: 100%; /* Full-width input fields */
+    padding: 8px; /* Padding inside input fields */
+    margin-top: 5px; /* Small top margin for spacing */
+}
+
+/* Form Button: Styling the submit button */
+form button {
+    background-color: #00f; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Removing default border */
+    padding: 10px 15px; /* Padding inside button */
+    cursor: pointer; /* Changing cursor to pointer on hover */
+    margin-top: 10px; /* Top margin for spacing */
+    font-size: 1em; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners for the button */
+}
+
+/* Form Button Hover: Changing button color on hover */
+form button:hover {
+    background-color: #00c; /* Darker blue on hover */
+}
+
+/* Footer Section: Styling the footer area */
+footer {
+    background-color: #000; /* Footer background color */
+    color: #00f; /* Footer text color */
+    text-align:center; /* Center aligning text */
+    padding: 10px 0; /* Top and bottom padding */
+    border-top: 2px solid #00f; /* Blue border at the top */
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
