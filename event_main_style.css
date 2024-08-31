@@ -1,87 +1,85 @@
-/* Global Reset: Removes default margin, padding, and sets box-sizing to border-box */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling: Sets font, text color, background color, and layout for the entire page */
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif; /* Default font for the page */
-    color: #fff; /* Default text color */
-    background-color: #000; /* Background color */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
     display: flex;
-    flex-direction: column; /* Layout for header, main, and footer */
-    height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    flex-direction: column;
+    height: 100vh;
 }
 
-/* Header Section: Styles the header area including title and subtitle */
+/* Header Section */
 header {
-    background-color: #000; /* Header background color */
-    color: #00f; /* Header text color */
-    padding: 20px 0; /* Padding on top and bottom */
-    text-align: center; /* Center-aligns the text */
-    border-bottom: 2px solid #00f; /* Blue border at the bottom of the header */
+    background-color: #000;
+    color: #00f;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #00f;
 }
 
-header h1 {
-    font-size: 2.5em; /* Font size for the main title */
-}
-
-header p {
-    font-size: 1.2em; /* Font size for the subtitle/description */
-}
-
-/* Main Content Area: Adds padding around the main content and allows it to grow */
+/* Main Content Area */
 main {
-    padding: 20px; /* Padding around the main content */
-    flex-grow: 1; /* Allows the main content to expand to fill the available space */
+    padding: 20px;
+    flex-grow: 1;
+    overflow: hidden;
 }
 
-/* Footer Section: Styles the footer area */
-footer {
-    background-color: #000; /* Footer background color */
-    color: #00f; /* Footer text color */
-    text-align: center; /* Center-aligns the text */
-    padding: 10px 0; /* Padding on top and bottom */
-    border-top: 2px solid #00f; /* Blue border at the top of the footer */
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-}
-
-
-/* Event Posters Section: Styles the event posters section */
+/* Event Posters Section */
 .event-posters {
-    padding: 40px 0; /* Padding on top and bottom */
-    background-color: #000; /* Background color */
-    text-align: center; /* Center-aligns the text */
+    padding: 40px 0;
+    background-color: #000;
+    text-align: center;
 }
 
 .event-posters h2 {
-    color: #00f; /* Heading text color */
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 2rem; /* Font size for the heading */
+    color: #00f;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    border-bottom: 2px solid #00f;
 }
 
-/* Posters Grid: Arranges posters in a flexible grid layout */
-.posters-grid {
-    display: flex; /* Flexbox layout for the grid */
-    justify-content: center; /* Centers the posters horizontally */
-    gap: 20px; /* Space between posters */
-    flex-wrap: wrap; /* Allows posters to wrap onto the next line if necessary */
+/* Scroll Container for Horizontal Scrolling */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 40px 0;
+    height: calc(100vh - 200px);
+    display: flex;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari */
+}
+
+/* Scroll Content: Inline Flex Layout */
+.scroll-content {
+    display: inline-flex;
+    gap: 20px;
     align-items: center;
 }
 
-/* Individual Poster Styling: Adds styles for each poster */
+/* Poster Styling */
+.poster {
+    display: inline-block;
+}
+
 .poster img {
-    width: 100%; /* Ensures the image takes up the full width of its container */
-    border-radius: 10px; /* Rounded corners for the images */
-    box-shadow: 0 4px 8px #00f; /* Adds a shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Smooth scaling effect on hover */
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #00f;
+    transition: transform 0.3s ease-in-out;
 }
 
 .poster img:hover {
-    transform: scale(2); /* Slightly enlarges the image on hover */
+    transform:scale(1.2);
 }
